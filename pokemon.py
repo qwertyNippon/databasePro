@@ -7,54 +7,64 @@ import requests, json
 def func(poke):
     data_dict = {}
     res1 = requests.get(f'https://pokeapi.co/api/v2/pokemon/{poke}')
-    data1 = res1.json()
-    info = data1['name']
-    data_dict['name'] = data1['name']
-    # data_dict['sprite'] = data1['sprites']['front_shinny']
+    data = res1.json()
+    data_dict['name'] = data['name']
+    data_dict['abilities'] = data['abilities'][0]['ability']
+    data_dict['base_experience'] = data['base_experience']
+    data_dict['sprites'] = data['sprites']['front_shiny']
+
     print(data_dict)
 
-func('clefairy')
+func('gyarados')
 
 def func(poke):
     data_dict = {}
     res1 = requests.get(f'https://pokeapi.co/api/v2/pokemon/{poke}')
     data = res1.json()
-    info = data['name']['abilities'][0]['ability']
     data_dict['name'] = data['name']
-    data_dict['abilities'] = data['ability']
+    data_dict['abilities'] = data['abilities'][0]['ability']
+    data_dict['base_experience'] = data['base_experience']
+    data_dict['sprites'] = data['sprites']['front_shiny']
+
     print(data_dict)
 
-func('speed')
+func('zapdos')
 
 def func(poke):
     data_dict = {}
     res1 = requests.get(f'https://pokeapi.co/api/v2/pokemon/{poke}')
     data = res1.json()
-    info = data['name']['abilities'][0]['ability']
     data_dict['name'] = data['name']
-    data_dict['abilities'] = data['ability']
+    data_dict['abilities'] = data['abilities'][0]['ability']
+    data_dict['base_experience'] = data['base_experience']
+    data_dict['sprites'] = data['sprites']['front_shiny']
+
     print(data_dict)
 
-func('charmander')
+func('lugia')
 
 def func(poke):
     data_dict = {}
     res1 = requests.get(f'https://pokeapi.co/api/v2/pokemon/{poke}')
     data = res1.json()
-    info = data['name']['abilities'][0]['ability']
     data_dict['name'] = data['name']
-    data_dict['abilities'] = data['ability']
+    data_dict['abilities'] = data['abilities'][0]['ability']
+    data_dict['base_experience'] = data['base_experience']
+    data_dict['sprites'] = data['sprites']['front_shiny']
+
     print(data_dict)
 
-func('dito')
+func('ditto')
 
 def func(poke):
     data_dict = {}
     res1 = requests.get(f'https://pokeapi.co/api/v2/pokemon/{poke}')
     data = res1.json()
-    info = data['name']['abilities'][0]['ability']
     data_dict['name'] = data['name']
-    data_dict['abilities'] = data['ability']
+    data_dict['abilities'] = data['abilities'][0]['ability']
+    data_dict['base_experience'] = data['base_experience']
+    data_dict['sprites'] = data['sprites']['front_shiny']
+
     print(data_dict)
 
 func('mew')
